@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="background-color:transparent;">Login</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="miFondoHome">
+  <ion-list>
+    <ion-item style="background-color:transparent;">
+      <ion-label fixed>Usuario</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="usuario"></ion-input>
+    </ion-item>
+    <ion-item style="background-color:transparent;">
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    <ion-item style="background-color:transparent;">
+      <button ion-button class="miBoton" (click)="Login()">Login</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Usuarios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="CargarUsuario('admin','11')">
+        Admin
+      </button>
+<button ion-item (click)="CargarUsuario('invitado','22')">
+        Invitado
+      </button>
+<button ion-item (click)="CargarUsuario('usuario','33')">
+        Usuario
+      </button>
+<button ion-item (click)="CargarUsuario('j1','44')">
+        J1
+      </button>
+<button ion-item (click)="CargarUsuario('j2','55')">
+        J2
+      </button>
+<button ion-item (click)="closeMenu()">
+        Close Menu
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

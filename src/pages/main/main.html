@@ -1,0 +1,25 @@
+<!--
+  Generated template for the MainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Recarga</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="mainFondo">
+  <ion-item no-line class="itemRecarga">
+    <label>Usuario: 
+    {{usuario.nombre}}<br></label>
+    <label>Credito: 
+    {{usuario.credito}}</label><br>
+    <button ion-button class="botonRecargar" (click)="verificarQR('8c95def646b6127282ed50454b73240300dccabc')">Recargar</button>
+  </ion-item>
+  
+</ion-content>
